@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif; /* FUENTE ✔ */
+    background-color: #f4f4f4; /* COLOR ✔ */
+    color: #333;
+}
+
+
+header {
+    background-color: #2c3e50; /* COLOR ✔ */
+    color: white;
+    padding: 20px; /* PADDING ✔ */
+    text-align: center;
+}
+
+/* NAVEGACIÓN */
+nav ul {
+    list-style: none;
+    margin-top: 10px; /* MARGEN ✔ */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px; /* MARGEN ✔ */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+nav a:hover {
+    color: #f39c12;
+    text-decoration: underline;
+}
+
+
+main {
+    padding: 20px; /* PADDING ✔ */
+}
+
+
+section {
+    margin-bottom: 30px; /* MARGEN ✔ */
+}
+
+
+article {
+    background-color: white;
+    padding: 15px; /* PADDING ✔ */
+    margin: 15px 0; /* MARGEN ✔ */
+    border-radius: 10px; /* BORDE ✔ */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* SOMBRA ✔ */
+    text-align: center;
+}
+
+
+article img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px; /* BORDE ✔ */
+    margin: 10px 0;
+}
+
+
+ul li {
+    margin: 10px 0;
+}
+
+
+form input, form button {
+    padding: 10px; /* PADDING ✔ */
+    margin-top: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+
+button {
+    background-color: #2c3e50; /* COLOR ✔ */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #34495e;
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px; /* PADDING ✔ */
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 20px;
+}
