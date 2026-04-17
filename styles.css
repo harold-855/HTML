@@ -1,9 +1,11 @@
+/*estilo general*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*estilo del cuerpo del contenido*/
 
 body {
     font-family: Arial, sans-serif; 
@@ -11,15 +13,18 @@ body {
     color: #333;
 }
 
-
+/* esitlo del encabezado*/
 header {
     background-color: #2c3e50; 
     color: white;
     padding: 20px; 
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* NAVEGACIÓN */
+/*estilo de la lista de navegacion y sus elementos*/
+
 nav ul {
     list-style: none;
     margin-top: 10px; 
@@ -42,14 +47,35 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/*estilo del relleno en el contenido principal*/
 
 main {
     padding: 20px; 
 }
 
+/* ajustes de tamaño en la seccion*/
 
 section {
     margin-bottom: 30px; 
+}
+
+/*ajustes en la lista de proyectos del portafolio*/
+
+#proyectos ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+} 
+
+
+
+#proyectos li {
+    background: burlywood;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
 }
 
 
@@ -62,6 +88,7 @@ article {
     text-align: center;
 }
 
+/*ajustes de los elementos dentro article*/
 
 article img {
     width: 100%;
@@ -75,6 +102,7 @@ ul li {
     margin: 10px 0;
 }
 
+/*modificasiones del boton*/
 
 form input, form button {
     padding: 10px; 
@@ -96,6 +124,7 @@ button:hover {
     background-color: #34495e;
 }
 
+/*pie de pagina*/
 
 footer {
     text-align: center;
@@ -103,4 +132,23 @@ footer {
     background-color: #2c3e50;
     color: white;
     margin-top: 20px;
+}
+
+/*ajustes en la seccion de mascotas */
+
+.galeria-mascotas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.galeria-mascotas article {
+    width: 300px;
+    margin: 10px;
+}
+
+.galeria-mascotas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
