@@ -1,38 +1,66 @@
-/*estilo general*/
+/* =========================
+   VARIABLES globales
+========================= */
+:root {
+    --color-principal: #2c3e50;
+    --color-secundario: #f39c12;
+    --color-fondo: #f4f4f4;
+    --color-texto: #333;
+    --color-card: #ffffff;
+    --radio: 10px;
+    --sombra: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   
+========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*estilo del cuerpo del contenido*/
-
+/* =========================
+   cuerpo
+========================= */
 body {
-    font-family: Arial, sans-serif; 
-    background-color: #f4f4f4; 
-    color: #333;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-size: 1rem;
 }
 
-/* esitlo del encabezado*/
+/* =========================
+   encabezado
+========================= */
 header {
-    background-color: #2c3e50; 
+    background-color: var(--color-principal);
     color: white;
-    padding: 20px; 
+    padding: 1.25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/*estilo de la lista de navegacion y sus elementos*/
+h1 {
+    font-size: 2rem;
+}
 
+h2 {
+    font-size: 1.5rem;
+}
+
+/* =========================
+   Navegacion
+========================= */
 nav ul {
     list-style: none;
-    margin-top: 10px; 
+    margin-top: 0.5rem;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px; 
+    margin: 0 1rem;
 }
 
 nav a {
@@ -41,114 +69,146 @@ nav a {
     font-weight: bold;
 }
 
-
 nav a:hover {
-    color: #f39c12;
+    color: var(--color-secundario);
     text-decoration: underline;
 }
 
-/*estilo del relleno en el contenido principal*/
-
+/* =========================
+   parte principal
+========================= */
 main {
-    padding: 20px; 
+    padding: 1.25rem;
 }
-
-/* ajustes de tamaño en la seccion*/
 
 section {
-    margin-bottom: 30px; 
+    margin-bottom: 2rem;
 }
 
-/*ajustes en la lista de proyectos del portafolio*/
-
-#proyectos ul{
+/* =========================
+   Lista de proyectos
+========================= */
+#proyectos ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    gap: 1rem;
     list-style: none;
-    padding: 0;
-} 
-
-
+}
 
 #proyectos li {
     background: burlywood;
-    padding: 15px;
-    border-radius: 8px;
+    padding: 1rem;
+    border-radius: var(--radio);
     text-align: center;
 }
 
-
+/* =========================
+   
+========================= */
 article {
-    background-color: white;
-    padding: 15px; 
-    margin: 15px 0; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    background-color: var(--color-card);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
     text-align: center;
 }
 
-/*ajustes de los elementos dentro article*/
-
+/* =========================
+   Imagenes
+========================= */
 article img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px; 
-    margin: 10px 0;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radio);
+    margin: 0.5rem 0;
 }
 
-
-ul li {
-    margin: 10px 0;
-}
-
-/*modificasiones del boton*/
-
-form input, form button {
-    padding: 10px; 
-    margin-top: 5px;
+/* =========================
+   Formulario
+========================= */
+form input,
+form button {
+    padding: 0.6rem;
+    margin-top: 0.3rem;
     width: 100%;
     max-width: 300px;
 }
-
 
 button {
-    background-color: #2c3e50; 
+    background-color: var(--color-principal);
     color: white;
     border: none;
     cursor: pointer;
 }
 
-
 button:hover {
-    background-color: #34495e;
+    background-color: var(--color-secundario);
 }
 
-/*pie de pagina*/
-
+/* =========================
+   pie de pagina
+========================= */
 footer {
     text-align: center;
-    padding: 15px; 
-    background-color: #2c3e50;
+    padding: 1rem;
+    background-color: var(--color-principal);
     color: white;
-    margin-top: 20px;
+    margin-top: 1.5rem;
 }
 
-/*ajustes en la seccion de mascotas */
-
-.galeria-mascotas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.galeria-mascotas article {
-    width: 300px;
-    margin: 10px;
-}
-
+/* =========================
+   GALERÍA (GRID)
+========================= */
 .galeria-mascotas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    gap: 1rem;
+}
+
+.galeria-mascotas article {
+    width: 100%;
+}
+
+/* =========================
+   📱 MEDIA QUERIES
+========================= */
+
+/* MÓVILES */
+@media (max-width: 600px) {
+
+    /* menú vertical */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    /* proyectos en 1 columna */
+    #proyectos ul {
+        grid-template-columns: 1fr;
+    }
+
+    /* galería en 2 columnas */
+    .galeria-mascotas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    /* proyectos en 2 columnas */
+    #proyectos ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* galería en 3 columnas */
+    .galeria-mascotas {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
